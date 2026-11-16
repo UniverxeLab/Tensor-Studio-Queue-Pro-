@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Studio Queue &amp; Bulk Downloader for Tensor.art</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" type="image/png" href="./assets/icon128.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html">
+          <img src="./assets/icon128.png" alt="Tensor Studio Queue icon" width="34" height="34" />
+          <span>
+            <span class="brand-name">Tensor Studio Queue</span>
+            <span class="brand-sub">by UniverxeLab · Chrome MV3 Extension</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="./index.html">Product Home</a>
+          <a href="./terms.html">Terms &amp; Refunds</a>
+          <a href="./privacy-policy.html" aria-current="page">Privacy Policy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap wrap-narrow">
+      <article class="legal-doc">
+        <h1>Privacy Policy</h1>
+        <div class="meta-bar">
+          <strong>Product:</strong> Studio Queue &amp; Bulk Downloader for Tensor.art (Chrome Manifest V3)<br />
+          <strong>Publisher:</strong> UniverxeLab<br />
+          <strong>Last Updated:</strong> November 16, 2026
+        </div>
+
+        <p>
+          <strong>Studio Queue &amp; Bulk Downloader for Tensor.art</strong> is a local-first Chrome browser extension
+          that helps creators organize prompt batches, synchronize generation controls inside <code>tensor.art</code>,
+          and save their own generated images/videos, prompt sidecar <code>.txt</code> files, <code>catalog.csv</code>
+          logs, and ZIP archives directly to their computer.
+        </p>
+
+        <h2>1. Data We Do NOT Collect</h2>
+        <ul>
+          <li>We do <strong>not</strong> run third-party analytics, ad pixels, behavioral trackers, or session recorders.</li>
+          <li>We do <strong>not</strong> sell, rent, share, or transfer any user data to advertisers or data brokers.</li>
+          <li>
+            We do <strong>not</strong> upload your prompts, negative prompts, style presets, generated outputs, Tensor.art
+            account credentials, cookies, or browsing history to any remote server — we operate <strong>zero</strong>
+            backend prompt-logging or scraping infrastructure.
+          </li>
+        </ul>
+
+        <h2>2. Data Stored Locally in Your Chrome Profile</h2>
+        <p>
+          To keep your presets, queued items, and preferences across browser restarts, the extension saves data locally
+          inside Chrome's built-in <code>chrome.storage.local</code> storage on your device:
+        </p>
+        <ul>
+          <li>Your custom style presets, prompt queue items, template variables, and pacing/Energy Guard settings.</li>
+          <li>Scanned gallery metadata (output URL, prompt snippet, timestamp, favorite ★ state) and daily free quota count.</li>
+          <li>Local creator XP rank / streak counters, 24-hour Pro Pass flag, and optional selector calibration overrides.</li>
+          <li>Your Pro license key (only if you voluntarily enter one in <strong>Setup &amp; Pro</strong>) and its cached verification result.</li>
+        </ul>
+        <p>
+          You can erase stored gallery/queue state anytime via <strong>Clear</strong> inside the extension, or remove all
+          extension data completely by uninstalling the extension in Chrome.
+        </p>
+
+        <h2>3. Chrome Permissions &amp; Strictly Scoped Access</h2>
+        <ul>
+          <li>
+            <code>storage</code>: Persists prompt templates, active queues, gallery index cache, local XP counters, and
+            license state inside your local browser profile.
+          </li>
+          <li>
+            <code>downloads</code>: Saves selected outputs, <code>.txt</code> prompt metadata files, <code>catalog.csv</code>,
+            and structured <code>.zip</code> bundles into your local <code>Downloads/TensorQueue/</code> folder when you click
+            Download or enable auto-download.
+          </li>
+          <li>
+            <code>sidePanel</code>: Renders the extension panel cleanly beside your active Tensor.art browser tab.
+          </li>
+          <li>
+            <code>scripting</code>: Used strictly as a fallback/recovery helper to attach content script controls on an
+            already open <code>tensor.art</code> tab without forcing a manual reload.
+          </li>
+          <li>
+            Host access (<code>https://*.tensor.art/*</code>, <code>https://*.tensorartassets.com/*</code>,
+            <code>https://*.tusiassets.com/*</code>, <code>https://*.r2.cloudflarestorage.com/*</code>): Restricts DOM
+            interaction solely to Tensor.art Studio pages and permits client-side media fetching of your own generated
+            workspace files solely when packaging user-requested ZIP exports. Never runs on unrelated websites.
+          </li>
+        </ul>
+
+        <h2>4. Optional Pro License Verification (Lemon Squeezy)</h2>
+        <p>
+          Using the Free tier and 24-hour milestone Pro Pass makes zero external license network requests. If you purchase
+          a <strong>Starter Pro</strong> or <strong>Early-Bird Lifetime</strong> key and click <strong>Activate Pro</strong>,
+          the extension transmits only the license key you entered and a non-identifying Chrome instance label to Lemon
+          Squeezy's official license API (<code>api.lemonsqueezy.com</code>) solely to validate license status and device
+          activation limits. Payment card details are processed exclusively by Lemon Squeezy (Merchant of Record) under
+          Lemon Squeezy's Privacy Policy.
+        </p>
+
+        <h2>5. Chrome Web Store Limited Use Compliance</h2>
+        <p>
+          The use of information received from Google/Chrome APIs strictly adheres to Chrome Web Store User Data Policy,
+          including Limited Use requirements: data is used solely to deliver the documented batch workflow and local
+          download features inside the extension interface.
+        </p>
+
+        <h2>6. Contact &amp; Privacy Inquiries</h2>
+        <p>
+          For privacy questions, data deletion clarifications, or support requests, contact the publisher at
+          <a href="mailto:support.univerxelab@gmail.com">support.univerxelab@gmail.com</a>.
+        </p>
+      </article>
+
+      <footer>
+        <span>© 2026 UniverxeLab · Studio Queue &amp; Bulk Downloader for Tensor.art</span>
+        <div class="footer-links">
+          <a href="./index.html">Product Home</a>
+          <a href="./terms.html">Terms &amp; Refunds</a>
+          <a href="mailto:support.univerxelab@gmail.com">Support</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tensor Studio Queue &amp; Bulk Downloader — Chrome Extension by UniverxeLab</title>
+    <meta
+      name="description"
+      content="Local-first Chrome Manifest V3 Side Panel workstation for Tensor.art: Portrait/Landscape/Square batch prompt queue, 112 style presets, decimal Energy Guard, and selective ZIP downloads with .txt sidecars and catalog.csv."
+    />
+    <meta property="og:title" content="Studio Queue & Bulk Downloader for Tensor.art" />
+    <meta
+      property="og:description"
+      content="Turn Tensor.art Studio into a calm batch machine: 112 styles, multi-shape live sync, decimal Energy Guard, and selective ZIP + .txt + catalog.csv exports."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://univerxelab.github.io/Tensor-Studio-Queue-Pro-/" />
+    <meta
+      property="og:image"
+      content="https://univerxelab.github.io/Tensor-Studio-Queue-Pro-/assets/marquee-promo-1400x560.png"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" type="image/png" href="./assets/icon128.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html">
+          <img src="./assets/icon128.png" alt="Tensor Studio Queue icon" width="34" height="34" />
+          <span>
+            <span class="brand-name">Tensor Studio Queue</span>
+            <span class="brand-sub">by UniverxeLab · Chrome MV3 Extension</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#showcase">Screenshots</a>
+          <a href="#workflow">How It Works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#feedback">Support &amp; Maker</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero hero-top" id="top">
+        <span class="badge">Chrome Side Panel Extension · v0.1.0 Local-First</span>
+        <h1>
+          <span class="grad-text">Turn Tensor.art Into a Calm Batch Machine</span>
+        </h1>
+        <p class="hero-sub">
+          Stop copy-pasting one prompt at a time. Run visual prompt batches right beside your active
+          <code>tensor.art</code> Create Studio modal, track live decimal Energy costs (e.g. <code>0.8 ⚡</code>)
+          before starting, and export clean selective ZIP archives with full-res PNG/MP4 files, <code>.txt</code>
+          prompt sidecars, and <code>catalog.csv</code>.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-mint" href="#pricing">Start Free · View Plans</a>
+          <a class="btn btn-violet" href="#showcase">See Side Panel in Action</a>
+        </div>
+
+        <div class="trust-row">
+          <span class="trust-pill"><strong>100% Local</strong> — Zero scraping servers</span>
+          <span class="trust-pill"><strong>112 Styles</strong> + 40 Niche Prompts</span>
+          <span class="trust-pill"><strong>Free Forever Tier</strong> + 24h Pro Pass</span>
+          <span class="trust-pill"><strong>Clean Feed Filter</strong> · Outputs Only</span>
+        </div>
+
+        <div class="hero-frame">
+          <img
+            src="./assets/marquee-promo-1400x560.png"
+            alt="Tensor Studio Queue and Gallery Zip Export chrome side panel preview"
+            width="1400"
+            height="560"
+          />
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="section-head">
+          <div class="section-kicker">Built for Daily Creators</div>
+          <h2>Everything Needed for High-Volume Tensor.art Output</h2>
+          <p>
+            Designed for illustrators, print-on-demand sellers, game artists, and prompt engineers who want
+            repeatable settings, zero wasted Energy, and organized local downloads.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>1. Live Studio Sync &amp; Energy Guard</h3>
+            <p>
+              Open the Studio modal in 1 click, switch single or multiple shapes (<code>Portrait</code>,
+              <code>Landscape</code>, <code>Square</code>), sync Images / Run (<code>1</code>, <code>2</code>, or
+              <code>4</code>), and see exact decimal Energy estimates right on <strong>Start Queue</strong>.
+            </p>
+          </article>
+          <article class="card">
+            <h3>2. 112 Style Presets + 8 Niche Packs</h3>
+            <p>
+              Browse 14 curated visual categories with transparent style preview and a 1-click <strong>Raw</strong> reset,
+              or drop 40 ready-to-run prompts across Comics, Anime, E-Commerce Studio, Interiors, Editorial Fashion, Dark
+              Fantasy, Etsy Wall Art, and 3D Isometric Dioramas.
+            </p>
+          </article>
+          <article class="card">
+            <h3>3. Clean Feed Scan &amp; Selective ZIP</h3>
+            <p>
+              Automatically skips checkpoint/model thumbnails to capture only your generated outputs, refreshes expiring
+              download links on every scan, and packages selected PNG/MP4s with <code>.txt</code> sidecars and
+              <code>catalog.csv</code>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="showcase">
+        <div class="section-head">
+          <div class="section-kicker">Workspace Walkthrough</div>
+          <h2>Inside the Chrome Side Panel</h2>
+          <p>Click any screen to zoom in and inspect how queues, styles, selective ZIP exports, and recovery tools work.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="shot-card">
+            <button
+              type="button"
+              class="shot-thumb"
+              data-lightbox="./assets/01-batch-queue-and-live-cost.png"
+              data-title="Live Studio Controls, Style Strip & Real-Time Energy Cost"
+            >
+              <img
+                src="./assets/01-batch-queue-and-live-cost.png"
+                alt="Batch Queue & Live Energy Cost screenshot"
+                loading="lazy"
+              />
+            </button>
+            <div class="shot-body">
+              <div class="shot-tag">Studio Tab</div>
+              <h3>What You See = What Runs + Live Energy Cost</h3>
+              <p>
+                Preview auto-added style prefixes/suffixes with 1-click Raw reset, switch multi-shape matrices, and
+                verify total batch Energy cost directly on <strong>Start Queue</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article class="shot-card">
+            <button
+              type="button"
+              class="shot-thumb"
+              data-lightbox="./assets/02-112-styles-and-niche-packs.png"
+              data-title="112 Curated Style Presets & 8 Ready-to-Run Niche Prompt Packs"
+            >
+              <img
+                src="./assets/02-112-styles-and-niche-packs.png"
+                alt="112 Styles and Niche Prompt Packs screenshot"
+                loading="lazy"
+              />
+            </button>
+            <div class="shot-body">
+              <div class="shot-tag">Templates &amp; Packs</div>
+              <h3>112 Styles &amp; 40 Instant Niche Prompts</h3>
+              <p>
+                Combine clean visual prompt cards with repeat multipliers (<code>1x+</code>), Mix &amp; Match columns,
+                CSV/TXT imports, and 8 starter prompt libraries.
+              </p>
+            </div>
+          </article>
+
+          <article class="shot-card">
+            <button
+              type="button"
+              class="shot-thumb"
+              data-lightbox="./assets/03-selective-zip-gallery.png"
+              data-title="Selective Gallery Checkboxes & Structured ZIP Export"
+            >
+              <img
+                src="./assets/03-selective-zip-gallery.png"
+                alt="Selective ZIP Gallery export screenshot"
+                loading="lazy"
+              />
+            </button>
+            <div class="shot-body">
+              <div class="shot-tag">Gallery Tab</div>
+              <h3>Pick Exact Outputs. Export 1 Clean ZIP.</h3>
+              <p>
+                Check individual outputs, favorite stars (★), or hit <strong>Pick 5</strong>. Every ZIP bundles full
+                images, matching <code>.txt</code> sidecars, and <code>catalog.csv</code>.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-2 mt-20">
+          <article class="shot-card">
+            <button
+              type="button"
+              class="shot-thumb"
+              data-lightbox="./assets/04-guide-and-creator-ranks.png"
+              data-title="Built-In ? Guide Manual, Glossary & Creator XP Ranks"
+            >
+              <img
+                src="./assets/04-guide-and-creator-ranks.png"
+                alt="Built-in Guide and Creator XP Ranks screenshot"
+                loading="lazy"
+              />
+            </button>
+            <div class="shot-body">
+              <div class="shot-tag">? Guide &amp; XP Progression</div>
+              <h3>Plain-Language Manual &amp; Local XP Ranks</h3>
+              <p>
+                Zero guesswork: every control has tooltip help plus an in-panel manual covering Wait/Jitter safety, LVL
+                1–5 Creator Ranks, and how to unlock your free 24h Pro Pass.
+              </p>
+            </div>
+          </article>
+
+          <article class="shot-card">
+            <button
+              type="button"
+              class="shot-thumb"
+              data-lightbox="./assets/05-selector-health-and-pro.png"
+              data-title="Self-Healing Selector Pick Recovery & Transparent Licensing"
+            >
+              <img
+                src="./assets/05-selector-health-and-pro.png"
+                alt="Selector Health and Setup & Pro screenshot"
+                loading="lazy"
+              />
+            </button>
+            <div class="shot-body">
+              <div class="shot-tag">Setup &amp; Pro Tab</div>
+              <h3>Self-Healing Selectors + 1-Click License Activation</h3>
+              <p>
+                Six live health checks confirm the extension is locked onto Tensor.art's prompt box, Negativo toggle,
+                Generate button, Results feed, and Energy counter. Click <strong>Pick</strong> to re-bind any control
+                in 5 seconds.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow">
+        <div class="section-head">
+          <div class="section-kicker">3-Minute Workflow</div>
+          <h2>How It Works Inside Chrome</h2>
+          <p>Everything runs locally inside your open Chrome browser tab — no cloud logins, proxies, or API keys.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="step-num">1</div>
+            <h3>Open Tensor.art &amp; Side Panel</h3>
+            <p>
+              Visit <code>tensor.art</code>, click <strong>Create / Crea</strong> (or the extension's 1-click button),
+              and confirm live green sync with your model, shape, and Energy balance.
+            </p>
+          </article>
+          <article class="card">
+            <div class="step-num">2</div>
+            <h3>Pick Style, Shapes &amp; Prompts</h3>
+            <p>
+              Choose a niche starter pack or type visual prompt cards, toggle multi-shapes if desired, set calm Wait +
+              Jitter pacing, and verify cost right on <strong>Start Queue</strong>.
+            </p>
+          </article>
+          <article class="card">
+            <div class="step-num">3</div>
+            <h3>Archive Selective ZIP + Metadata</h3>
+            <p>
+              Review outputs in <strong>Gallery</strong>, star favorites, check exact images you want to keep, and export
+              organized folders inside <code>Downloads/TensorQueue/</code>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="section-head">
+          <div class="section-kicker">Simple &amp; Honest Pricing</div>
+          <h2>Start Free. Upgrade Only If You Batch Daily.</h2>
+          <p>
+            Test the complete engine free before spending anything — plus earn a one-time <strong>Free 24h Pro Pass</strong>
+            simply by trying real batches inside the extension.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card price-card">
+            <div>
+              <div class="price-card-head">
+                <span class="plan-badge plan-badge-slate">No Card Required</span>
+                <h3>Free Forever</h3>
+                <div class="price price-neutral">$0 <span>/ forever</span></div>
+              </div>
+              <ul>
+                <li><strong>5 queued prompts per day</strong> (resets daily)</li>
+                <li>All <strong>112 built-in style presets</strong> &amp; 8 niche packs</li>
+                <li>Live Studio sync &amp; Energy Guard safety stop</li>
+                <li>Unlimited individual &amp; Save All downloads</li>
+                <li>Selective ZIP export up to <strong>5 selected images/ZIP</strong></li>
+              </ul>
+            </div>
+            <a class="btn" href="#workflow">View Setup (CWS Soon) ↓</a>
+          </article>
+
+          <article class="card price-card">
+            <div>
+              <div class="price-card-head">
+                <span class="plan-badge plan-badge-indigo">Flexible Monthly</span>
+                <h3>Starter Pro</h3>
+                <div class="price price-indigo">$4.90 <span>/ month</span></div>
+              </div>
+              <ul>
+                <li><strong>Unlimited daily prompt queues</strong> &amp; multi-shape batches</li>
+                <li><strong>Unlimited selected images</strong> per ZIP export</li>
+                <li>Checkpoint pauses &amp; full batch CSV catalogs</li>
+                <li>Use across up to <strong>5 Chrome installs</strong></li>
+                <li>Instant email license key · Cancel anytime in customer portal</li>
+              </ul>
+            </div>
+            <a class="btn btn-violet" href="#feedback">Launch Checkout Opening Soon →</a>
+          </article>
+
+          <article class="card card-featured price-card">
+            <div>
+              <div class="price-card-head">
+                <span class="plan-badge plan-badge-violet">Best Launch Value</span>
+                <h3>Early-Bird Lifetime</h3>
+                <div class="price"><s class="price-strike">$49</s> $29 <span>one-time</span></div>
+              </div>
+              <p class="price-batch-note">Founding batch (first 50 keys) &mdash; after launch: $29/yr Annual or $49 Lifetime</p>
+              <ul>
+                <li>Everything in Starter Pro <strong>forever</strong></li>
+                <li><strong>Zero recurring subscriptions</strong> — pay once</li>
+                <li>All v0.x updates &amp; selector definitions included</li>
+                <li>Use across up to <strong>5 Chrome installs</strong></li>
+                <li>Protected by our <strong>7-day refund guarantee</strong></li>
+              </ul>
+            </div>
+            <a class="btn btn-mint" href="#feedback">Reserve Founding Key Notice →</a>
+          </article>
+        </div>
+
+        <div class="callout-banner">
+          <strong>Release Status &amp; Free 24h Pro Pass:</strong> Chrome Web Store submission &amp; Lemon Squeezy Live checkout are in launch prep — start with the Free tier and generate <strong>8 items</strong> (or hit a <strong>2-day streak</strong>) to unlock a <strong>Free 24-Hour Pro Pass</strong> inside <code>Setup &amp; Pro</code> before purchasing any key.
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="section-head">
+          <div class="section-kicker">Questions &amp; Answers</div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Does this extension send my prompts, images, or Tensor.art cookies to remote servers?</summary>
+            <p>
+              No. Everything runs 100% inside your own Chrome browser using Manifest V3 local storage
+              (<code>chrome.storage.local</code>) and Chrome's native <code>downloads</code> API. We operate zero remote
+              scraping servers and never see your prompts, Tensor.art account, or generated media. The only external request
+              is optional Pro license validation directly against <code>api.lemonsqueezy.com</code> if you enter a key.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is billing handled and who processes Pro payments?</summary>
+            <p>
+              Paid licenses (<strong>$4.90/mo Starter Pro</strong> and <strong>$29 Early-Bird Lifetime</strong>) are sold
+              directly by UniverxeLab through <strong>Lemon Squeezy</strong> as Merchant of Record, not by Google or Chrome
+              Web Store. Lemon Squeezy handles cards/PayPal, regional VAT/sales tax compliance, receipts, and instant email
+              license key delivery.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if Tensor.art updates its Create modal layout and selectors stop clicking?</summary>
+            <p>
+              Open the <strong>Setup &amp; Pro</strong> tab and check <strong>Selector Health</strong>. Any affected box
+              marks Missing and you can click <strong>Pick</strong> next to that control, then click the corresponding
+              field inside Tensor.art to save a permanent local override in 5 seconds.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why do you recommend re-scanning before exporting old batches to ZIP?</summary>
+            <p>
+              Tensor.art serves generated workspace outputs through expiring signed Cloudflare R2 URLs (valid for 1 hour).
+              Clicking <strong>Scan Page</strong> inside Gallery automatically refreshes the latest download links for all
+              visible creations without duplicating cards.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is this an official Tensor.art product?</summary>
+            <p>
+              No. Studio Queue &amp; Bulk Downloader for Tensor.art is an independent client-side productivity utility
+              developed by UniverxeLab to help creators organize prompts and archives inside their own browser session.
+              It is not affiliated with or endorsed by Tensor.art.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="feedback">
+        <div class="section-head">
+          <div class="section-kicker">Support &amp; Independent Developer</div>
+          <h2>Built in the Open. Fixed Quickly.</h2>
+          <p>
+            No anonymous support black holes — talk directly to the developer who built and maintains the extension.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card" id="maker">
+            <div class="maker-head">
+              <div class="maker-avatar" aria-hidden="true">UL</div>
+              <div>
+                <div class="maker-meta">Independent Studio · 20+ Years Shipping Software</div>
+                <h3>About UniverxeLab</h3>
+              </div>
+            </div>
+            <p class="mb-12">
+              I am an independent software engineer with over 20 years of hands-on experience building web apps,
+              interfaces, and workflow automation utilities. I created Tensor Studio Queue because manually running
+              batches and managing expiring workspace links broke creative momentum.
+            </p>
+            <p>
+              My rule for every UniverxeLab tool is straightforward: run locally inside your browser without scraping
+              servers, respect your privacy, and keep selectors healthy as platforms evolve.
+            </p>
+            <div class="maker-pills">
+              <span class="maker-pill">Active Version: v0.1.0</span>
+              <span class="maker-pill">100% Client-Side MV3</span>
+              <span class="maker-pill">Weekly Selector Care</span>
+            </div>
+          </article>
+
+          <article class="card" id="terms">
+            <div class="maker-head">
+              <div class="maker-avatar" aria-hidden="true">?</div>
+              <div>
+                <div class="maker-meta">Feedback, Bugs &amp; Feature Requests</div>
+                <h3>Hit a Bug or Idea? Tell Me First</h3>
+              </div>
+            </div>
+            <p class="mb-12">
+              Tensor.art updates its Create modal regularly. If something ever stops clicking, an export behaves
+              unexpectedly, or you want a new capability, please message me directly before giving up on a workflow.
+            </p>
+            <p>
+              Real user feedback directly drives v0.1.x patches — bug reports, license resets, and feature suggestions
+              are actively reviewed and typically answered within 24–48 hours.
+            </p>
+            <div class="cta-row cta-tight">
+              <a
+                class="btn btn-mint btn-sm"
+                href="mailto:support.univerxelab@gmail.com?subject=Tensor%20Studio%20Queue%20Feedback%20%2F%20Bug%20Report"
+                >Email Support Directly →</a
+              >
+              <a
+                class="btn btn-violet btn-sm"
+                href="https://github.com/UniverxeLab/Tensor-Studio-Queue-Pro-/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Report Bug or Idea on GitHub →</a
+              >
+            </div>
+            <div class="divider-top">
+              <strong>Billing &amp; Legal:</strong> Payments, VAT/tax receipts, and key delivery handled by
+              <strong>Lemon Squeezy</strong> (Merchant of Record). Covered by a <strong>7-day refund window</strong>.
+              <div class="cta-row cta-tight">
+                <a class="btn btn-sm" href="./terms.html">Terms &amp; Refund Policy</a>
+                <a class="btn btn-sm" href="./privacy-policy.html">Privacy Policy</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 UniverxeLab · Studio Queue &amp; Bulk Downloader for Tensor.art</span>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./terms.html">Terms &amp; Refunds</a>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="mailto:support.univerxelab@gmail.com">Support</a>
+        </div>
+      </footer>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+      <div class="lightbox-inner">
+        <div class="lightbox-bar">
+          <span id="lightbox-title">Screenshot Preview</span>
+          <button type="button" class="lightbox-close" id="lightbox-close">Close ✕</button>
+        </div>
+        <img id="lightbox-img" src="" alt="Expanded extension screenshot" />
+      </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
